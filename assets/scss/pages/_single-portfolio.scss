@@ -1,0 +1,206 @@
+.portfolio {
+    &-hero {
+        padding-top: 16rem;
+        @include mq(tablet-small) {
+            padding-block: 16rem 19rem;
+        }
+        .container {
+            display: flex;
+            @include mq(tablet-small, max) {
+                flex-direction: column-reverse;
+            }
+        }
+        .mobile-show {
+            position: relative;
+            margin-top: 5rem;
+            margin-bottom: 7.2rem;
+            padding-block: 2rem;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            border-block: 1px solid #999999;
+            transition: 0.3s;
+            @include mq(tablet-small) {
+                display: none;
+            }
+            &::before, &::after {
+                position: absolute;
+                content: '';
+                right: 2rem;
+                top: 50%;
+                border: 1px solid $black-clr;
+                transform: translateY(-50%);
+                transition: 0.3s;
+            }
+            &::before {
+                width: 1.2rem;
+            }
+            &::after {
+                right: 2.5rem;
+                height: 1.2rem;
+            }
+            &.active {
+                margin-bottom: 0;
+                &::after {
+                    transform: translateY(-50%) rotate(90deg);
+                }
+            }
+        }
+        &__info {
+            display: none;
+            margin-top: 4.2rem;
+            width: 35rem;
+            @include mq(tablet-small) {
+                display: block;
+                margin-top: 3rem;
+            }
+            &__item {
+                margin-bottom: 1.6rem;
+                .item-title {
+                    margin-bottom: 0.8rem;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    letter-spacing: 0.14re;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+                .item-content {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+        &__main {
+            max-width: 66.6rem;
+        }
+        &__position {
+            margin-bottom: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14rem;
+            @include mq(tablet-small) {
+                font-weight: 600;
+            }
+        }
+        &__title {
+            margin-bottom: 3.6rem;
+            @include mq(tablet-small) {
+                font-size: 5.4rem;
+                margin-bottom: 4rem;
+            }
+        }
+        &__content {
+            p {
+                margin-top: 4rem;
+                @include mq(tablet-small) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+    &-gallery {
+        margin-bottom: 10rem;
+        @include mq(tablet-small) {
+            margin-bottom: 14rem;
+        }
+        &__carousel {
+            display: flex;
+            .gallery-image {
+                margin-inline: 0.6rem;
+                @include mq(tablet-small) {
+                    margin-inline: 3rem;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                &__info {
+                    display: none;
+                    margin-top: 2.5rem;
+                    @include mq(tablet-small) {
+                        margin-top: 3rem;
+                        align-items: center;
+                    }
+                    .info-number {
+                        margin-right: 3rem;
+                        @include mq(tablet-small, max) {
+                            font-size: 1.4rem;
+                        }
+                    }
+                    .info-caption {
+                        font-size: 1.4rem;
+                        line-height: 1.9rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .slick-list {
+                max-height: 29rem;
+                @include mq(tablet-small) {
+                    max-height: 64rem;
+                }
+            }
+            .slick-track {
+                display: flex !important;
+                height: calc(100% - 4rem);
+            }
+            .slick-slide {
+                height: inherit !important;
+                width: 860px;
+                @include mq(tablet-small, max) {
+                    width: calc(100vw - 10rem);
+                }
+                &.slick-current {
+                    .gallery-image__info {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+    &-team {
+        margin-bottom: 22rem;
+        padding-block: 10rem;
+        background-color: $black-clr;
+        @include mq(tablet-small) {
+            margin-bottom: 23rem;
+        }
+        .container {
+            @include mq(tablet-small) {
+                display: flex;
+            }
+        }
+        &__title {
+            width: 35rem;
+            color: $white-clr;
+            @include mq(tablet-small, max) {
+                margin-bottom: 7.2rem;
+            }
+        }
+        &__info {
+            display: grid;
+            gap: 3.6rem;
+            @include mq(tablet-small) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include mq(desktop-small) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            &__item {
+                padding-top: 0.4rem;
+                border-top: 1px solid $white-clr;
+                .item-title {
+                    margin-bottom: 1.4rem;
+                    color: $white-clr;
+                    text-transform: uppercase;
+                }
+                .item-content {
+                    color: $white-clr;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.services {
+    display: flex;
+    background-color: $white-clr;
+    padding-bottom: 16rem;
+    padding-top: 22rem;
+    @include mq(tablet-small) {
+        padding-bottom: 36rem;
+        padding-top: 30rem;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        align-items: flex-start;
+        @include mq(tablet-small, max) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+    &-content {
+        width: 100%;
+    }
+    &-accordion {
+        &__item {
+            padding-block: 2.8rem;
+            border-block: 1px solid rgba($gray-clr, 0.7);
+            transition: 0.3s;
+            @include mq(tablet-small) {
+                padding-block: 3.6rem;
+            }
+            &:last-child {
+                border-bottom: 2px solid rgba($gray-clr, 0.7);
+            }
+            &:first-child {
+                border-top: 2px solid rgba($gray-clr, 0.7);
+            }
+            &__title {
+                position: relative;
+                font-weight: 400;
+                cursor: pointer;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    right: 2.2rem;
+                    width: 2.1rem;
+                    height: 1.6rem;
+                    transform: translate(-50%, -50%);
+                    @include svg-background("%3Csvg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.784 0L20.8 7.38138V8.61862L13.784 16L12.64 14.7964L17.456 9.72962L18.368 9.04787L18.28 8.73645L17.168 8.8627L0 8.8627L0 7.1373L17.16 7.1373L18.272 7.26355L18.36 6.95213L17.448 6.27038L12.64 1.20358L13.784 0Z' fill='%230D0D0D'/%3E%3C/svg%3E");
+                    @include mq(tablet-small) {
+                        right: 12rem;
+                    }
+                    @include when-inside('.services--career') {
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
+            }
+            &__description {
+                display: none;
+                margin-top: 2rem;
+            }
+            &:hover {
+                border-color: rgba($light-blue-clr, 0.8);
+            }
+            &:nth-child(1) {
+                &:hover {
+                    border-top-color: rgba($light-blue-clr, 0.4);
+                }
+            }
+            &:nth-child(2) {
+                &:hover {
+                    border-color: rgba($light-green-clr, 0.8);
+                }
+            }
+            &:nth-child(3) {
+                &:hover {
+                    border-color: rgba($light-yellow-clr, 0.8);
+                }
+            }
+            &:nth-child(4) {
+                &:hover {
+                    border-color: rgba($light-yellow-clr, 0.8);
+                }
+            }
+            &:nth-child(5) {
+                &:hover {
+                    border-color: rgba($light-rose-clr, 0.8);
+                    border-bottom-color: rgba($light-rose-clr, 0.4);
+                }
+            }
+        }
+    }
+    &-content {
+        &__cta {
+            margin-top: 7.2rem;
+            @include mq(tablet-small) {
+                display: none;
+            }
+        }
+    }
+}

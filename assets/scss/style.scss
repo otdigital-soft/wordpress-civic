@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendor/normalize', 'vendor/wp-core';
+
+// 3. Base stuff
+@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers', 'base/animation';
+
+// 4. Layout-related sections
+@import 'layout/header', 'layout/footer';
+
+// 5. Components
+@import 'components/button',
+        'components/banner',
+        'components/introduction',
+        'components/statistics',
+        'components/portfolio',
+        'components/loop-portfolio',
+        'components/loop-team',
+        'components/loop-post',
+        'components/services',
+        'components/brands',
+        'components/news',
+        'components/core',
+        'components/team',
+        'components/hamburger';
+
+@import 'pages/portfolio',
+        'pages/single-portfolio',
+        'pages/404',
+        'pages/news',
+        'pages/about',
+        'pages/services';

@@ -1,0 +1,107 @@
+/**
+ * Basic typography style for copy text
+ */
+
+.cap {
+    font-size: 8rem;
+    font-weight: 600;
+    @include mq(tablet-small) {
+        font-size: 12rem;
+    }
+    @include mq(desktop-small) {
+        font-size: 20rem;
+    }
+}
+
+h1,
+.h1 {
+    font-size: 4rem;
+    font-family: $f-heading;
+    letter-spacing: -0.02rem;
+    line-height: 104%;
+    font-weight: 700;
+    @include mq(tablet-small, min) {
+        font-size: 5rem;
+    }
+    @include mq(desktop-small, min) {
+        font-size: 6.2rem;
+    }
+}
+h2,
+.h2 {
+    font-size: 3.6rem;
+    font-family: $f-heading;
+    letter-spacing: -2%;
+    line-height: 104%;
+    font-weight: 700;
+    @include mq(tablet-small, min) {
+        font-size: 5rem;
+    }
+    @include mq(desktop-small, min) {
+        font-size: 6.2rem;
+    }
+}
+
+h4,
+.h4 {
+    font-size: 2rem;
+    font-family: $f-heading;
+    line-height: 2.6rem;
+    font-weight: 600;
+    @include mq(desktop-small, min) {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+    }
+}
+
+h5,
+.h5 {
+    font-size: 1.6rem;
+    font-family: $f-heading;
+    line-height: 2.4rem;
+    font-weight: 600;
+    @include mq(desktop-small, min) {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
+h6,
+.h6 {
+    font-size: 2rem;
+    font-family: $f-heading;
+    line-height: 3rem;
+    font-weight: 700;
+    @include mq(desktop-small, min) {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+    }
+}
+
+p,
+.p {
+    font-size: 1.6rem;
+    font-family: $f-text;
+    line-height: 2.4rem;
+    font-weight: 400;
+    @include mq(tablet-small) {
+        line-height: 2.56rem;
+    }
+}
+
+.p1 {
+    font-size: 2rem;
+    font-family: $f-text;
+    line-height: 3rem;
+    font-weight: 300;
+    @include mq(tablet-small) {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+    }
+}
+.p2 {
+    font-size: 1.2rem;
+    font-family: $f-text;
+    line-height: 1.8rem;
+    font-weight: 400;
+}

@@ -1,0 +1,13 @@
+.team {
+    background-color: $white-clr;
+    .container {
+        @include mq(tablet-small) {
+            display: flex;
+        }
+    }
+    .team-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6rem 1.8rem;
+    }
+}

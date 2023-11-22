@@ -1,0 +1,42 @@
+.loop-portfolio {
+    margin-inline: 10px;
+    width: calc((100% - 2rem) / 2);
+    &__img {
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: 0.5s;
+        }
+        &:hover {
+            img {
+                transform: scale(1.07);
+            }
+        }
+    }
+    &__title {
+        margin-top: 1.8rem;
+        color: $black-clr;
+    }
+    &__position {
+        margin-top: 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14rem;
+    }
+    &__category {
+        display: flex;
+        margin-top: 1.2rem;
+        &__item {
+            margin-right: 0.8rem;
+            padding: 0.8rem 0.9rem;
+            border-radius: 2rem;
+            border: 1px solid $gray-clr;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+    }
+    &:hover {
+        .loop-portfolio__title {
+            text-decoration: underline;
+        }
+    }
+}

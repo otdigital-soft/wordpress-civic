@@ -1,0 +1,44 @@
+.introduction {
+    height: 100vh;
+    background-color: $black-clr;
+    position: relative;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 714px;
+        height: 100%;
+    }
+    &-description {
+        margin-bottom: 6rem;
+        color: $gray-light-clr;
+        @include mq(tablet-small) {
+            margin-bottom: 7.2rem;
+        }
+    }
+    &-circles {
+        position: absolute;
+        top: 23.8rem;
+        right: 9rem;
+        @include mq(tablet-small, max) {
+            display: none;
+        }
+        .circle {
+            position: absolute;
+            left: 0;
+            width: 14rem;
+            height: 14rem;
+            border-radius: 50%;
+            border: 1px solid #4d4d4d;
+            &:nth-child(1) {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 10rem;
+            }
+            &:nth-child(3) {
+                top: 20rem;
+            }
+        }
+    }
+}

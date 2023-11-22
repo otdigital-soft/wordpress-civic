@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif !default;
+
+$f-heading: 'Figtree';
+$f-text: 'Figtree';
+
+$blue-clr: #0A0671 !default;
+$light-blue-clr: #3F8EFC !default;
+$green-clr: #003b36 !default; 
+$light-green-clr: #28C498 !default; 
+$rose-clr: #430b2c !default;
+$light-rose-clr: #861657 !default;
+$gray-clr: #D9D9D9 !default;
+$gray-light-clr: #FDFFFC !default;
+$light-yellow-clr: #F1C257 !default;
+
+$black-clr: #0D0D0D !default;
+$white-clr: #FDFFFC !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #000 !default;
+
+/// Main brand color
+/// @type Color
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1440px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "phone-xsmall": 320px,
+  "phone-s21": 360px,
+  "phone-small": 375px,
+  "phone": 425px,
+  "phone-wide": 480px,
+  "phablet": 560px,
+  "tablet-small": 640px,
+  "tablet": 768px,
+  "tablet-wide": 992px,
+  "desktop-small": 1024px,
+  "desktop": 1200px,
+  "desktop-wide": 1439px,
+  "desktop-ultra": 1599px,
+) !default;
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/wp-content/themes/civic/assets/' !default;

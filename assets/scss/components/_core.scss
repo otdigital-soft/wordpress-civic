@@ -1,0 +1,97 @@
+.core {
+    background-color: $light-rose-clr;
+    @include mq(tablet-small, max) {
+        padding-block: 12rem;
+    }
+    @include mq(tablet-small) {
+        height: 100rem;
+    }
+    .container {
+        height: 100%;
+        @include mq(tablet-small) {
+            display: flex;
+        }
+    }
+    &-intro {
+        @include mq(tablet-small) {
+            padding-top: 22.8rem;
+            padding-right:7.6rem;
+        }
+    }
+    &-title, &-description {
+        color: $white-clr;
+    }
+    &-content {
+        @include mq(tablet-small) {
+            display: flex;
+        }
+    }
+    &-quote {
+        @include mq(tablet-small, max) {
+            padding-top: 0 !important;
+        }
+        @include mq(tablet-small) {
+            border-left: 1px solid #C14989;
+        }
+        &:last-child {
+            @include mq(tablet-small) {
+                border-right: 1px solid #C14989;
+            }
+        }
+        &__item {
+            @include mq(tablet-small, max) {
+                padding-block: 2.4rem;
+                border-bottom: 1px solid #C14989;
+            }
+            @include mq(tablet-small) {
+                padding: 2.3rem 2rem;
+                min-height: 16rem;
+                width: 35rem;
+                border-top: 1px solid #C14989;
+            }
+            &:last-child {
+                @include mq(tablet-small) {
+                    border-bottom: 1px solid #C14989;
+                }
+            }
+            &:first-child {
+                @include mq(tablet-small, max) {
+                    border-top: 1px solid #C14989;
+                }
+            }
+            &__title, &__description {
+                color: $white-clr;
+            }
+            &__title {
+                position: relative;
+                cursor: pointer;
+                &::after, &::before {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    border: 1px solid $white-clr;
+                    transform: translateY(-50%);
+                }
+                &::after {
+                    right: 0;
+                    width: 1.4rem;
+                }
+                &::before {
+                    right: 0.6rem;
+                    height: 1.4rem;
+                    transition: 0.3s;
+                    @include when-inside('.active') {
+                        transform: translateY(-50%) rotate(90deg);
+                    }
+                }
+            }
+            &__description {
+                display: none;
+                margin-top: 5rem;
+                @include mq(tablet-small) {
+                    margin-top: 10rem;
+                }
+            }
+        }
+    }
+}

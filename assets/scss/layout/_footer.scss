@@ -1,0 +1,155 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+    padding-bottom: 2.4rem;
+    background-color: $white-clr;
+    @include mq(tablet-small) {
+        padding-block: 6rem;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        @include mq(tablet-small, max) {
+            flex-direction: column-reverse;
+        }
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        @include mq(tablet-small) {
+            margin-right: 4rem;
+        }
+        @include mq(tablet-small, max) {
+            width: 50%;
+        }
+        &__address {
+            @include mq(tablet-small) {
+                margin-bottom: 2rem;
+            }
+            &__item {
+                span {
+                    font-weight: 700;
+                    @include mq(tablet-small, max) {
+                        display: block;
+                    }
+                }
+                @include mq(tablet-small, max) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        &__social_and_logo {
+            margin-top: auto;
+            @include mq(tablet-small) {
+                display: flex;
+                align-items: flex-end;
+            }
+            
+        }
+        &__social {
+            display: flex;
+            list-style: none;
+            @include mq(tablet-small, max) {
+                margin-block: 4rem;
+            }
+            @include mq(tablet-small) {
+                margin-right: 6rem;
+            }
+            &__item {
+                margin-right: 2.4rem;
+            }
+        }
+    }
+    &-logo {
+        @include mq(tablet-small) {
+            transform: translateY(4px);
+        }
+    }
+
+    &-menu {
+        @include mq(tablet-small, max) {
+            margin-bottom: 4.8rem;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            font-family: $f-text;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            color: $black-clr;
+            text-transform: uppercase;
+            letter-spacing: 0.14rem;
+        }
+        &__main {
+            .menu-item {
+                margin-bottom: 2.4rem;
+                padding-block: 0.8rem;
+                border-top: 1px solid $black-clr;
+                transition: 0.3s;
+                &:hover {
+                    border-top: 1px solid $light-blue-clr;
+                    @include when-inside('.error404') {
+                        border-color: #C07203;
+                    }
+                    @include when-inside('.page-template-news') {
+                        border-color: #C07203;
+                    }
+                }
+            }
+        }
+        &__extra {
+            @include mq(tablet-small) {
+                display: flex;
+            }
+            &__item {
+                position: relative;
+                margin-bottom: 2.4rem;
+                padding-block: 0.8rem;
+                transition: 0.3s;
+                @include mq(tablet-small, max) {
+                    border-top: 1px solid $black-clr;
+                }
+                @include mq(tablet-small) {
+                    margin-right: 4rem;
+                }
+                @include mq(tablet-small) {
+                    &::before {
+                      position: absolute;
+                      content: '';
+                      left: 0;
+                      bottom: 0.4rem;
+                      width: 0;
+                      opacity: 0;
+                      transition: 0.3s;
+                      border-top: 1px solid $black-clr;
+                    }
+                    &:hover {
+                      &::before {
+                        width: 100%;
+                        opacity: 1;
+                      }
+                    }
+                  }
+            }
+        }
+        &__menu {
+            @include mq(tablet-small) {
+                display: flex;
+            }
+            &__item {
+                @include mq(tablet-small, max) {
+                    margin-bottom: 2.4rem;
+                }
+                @include mq(tablet-small) {
+                    margin-right: 3rem;
+                }
+                a {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

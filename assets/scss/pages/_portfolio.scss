@@ -1,0 +1,153 @@
+.portfolio {
+    &-banner {
+        display: flex;
+        height: 100vh;
+        .container {
+            margin: auto;   
+            @include mq(tablet-small) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        &__circles {
+            @include mq(tablet-small) {
+                flex-shrink: 0;
+                width: 35rem;
+            }
+            .circles {
+                display: flex;
+                margin-top: 0.8rem;
+                transform: translateX(-5rem);
+                @include mq(tablet-small, max) {
+                    display: none;
+                }
+            }
+            .circle {
+                margin-right: 1.2rem;
+                width: 4.5rem;
+                height: 4.5rem;
+                border-radius: 50%;
+                border: 1px solid $gray-clr;
+                &-green {
+                    border-color: $light-green-clr;
+                }
+            }
+        }
+        &__content {
+            width: 100%;
+        }
+        &__title {
+            margin-bottom: 5.6rem;
+            @include mq(tablet-small) {
+                margin-bottom: 6rem;
+            }
+        }
+        &__description {
+            max-width: 66.6rem;
+            margin-bottom: 6rem;
+            @include mq(tablet-small) {
+                margin-bottom: 8rem;
+            }
+        }
+        &__number {
+            @include mq(tablet-small) {
+                display: flex;
+            }
+            &__item {
+                @include mq(tablet-small) {
+                    margin-right: 7.8rem;
+                }
+                @include mq(tablet-small, max) {
+                    margin-bottom: 4rem;
+                }
+                &__number {
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                    font-size: 3.6rem;
+                    @include mq(tablet-small) {
+                        font-size: 5.6rem;
+                    }
+                }
+                &__title {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    &-archieve {
+        margin-bottom: 22rem;
+        @include mq(tablet-small) {
+            margin-bottom: 30rem;
+        }
+        .container {
+            @include mq(tablet-small) {
+                display: flex;
+            }
+        }
+        &__info {
+            margin-bottom: 7.2rem;
+            @include mq(tablet-small) {
+                width: 35rem;
+                flex-shrink: 0;
+            }
+            &__title {
+                margin-bottom: 2rem;
+                font-size: 1.6rem;
+                line-height: 2rem;
+                font-weight: 700;
+                @include mq(tablet-small) {
+                    margin-bottom: 3.2rem;
+                    font-size: 1.8rem;
+                    line-height: 2.7rem;
+                }
+            }
+        }
+        &__category {
+            list-style: none;
+            &__item {
+                margin-bottom: 0.8rem;
+                padding: 1rem 1.4rem;
+                width: fit-content;
+                font-size: 1rem;
+                border-radius: 2rem;
+                letter-spacing: 0.14rem;
+                text-transform: uppercase;
+                border: 1px solid $gray-clr;
+                cursor: pointer;
+                transition: 0.3s;
+                &.active {
+                    border-color: $light-green-clr;
+                    background-color: $light-green-clr;
+                }
+                &:hover {
+                    background-color: $light-green-clr;
+                }
+            }
+        }
+        &__content {}
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 6rem 0;
+            @include mq(tablet-small) {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 7.2rem 3.8rem;
+            }
+            @include mq(tablet) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 7.2rem 3.8rem;
+            }
+            @include mq(desktop) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 7.2rem 3.8rem;
+            }
+            
+            .loop-portfolio {
+                width: 100%;
+                @include mq(tablet-small, max) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.portfolio {
+    display: flex;
+    height: 100vh;
+    background-color: $white-clr;
+    .container {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        align-items: flex-start;
+        @include mq(tablet-small, max) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+    &-carousel {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .slick-track {
+            @include mq(tablet-small, max) {
+                margin-left: -60px;
+            }
+        }
+        @include mq(tablet-small) {
+            .slick-arrow {
+                top: calc(100% + 6rem);
+                &::before {
+                    display: none;
+                }
+            }
+            .slick-prev {
+                left: calc(36% - 2rem);
+                width: 30px;
+                @include svg-background("%3Csvg width='26' height='20' viewBox='0 0 26 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.23 0L26 9.22672V10.7733L17.23 20L15.8 18.4955L21.82 12.162L22.96 11.3098L22.85 10.9206L21.46 11.0784H0V8.92161H21.45L22.84 9.07943L22.95 8.69016L21.81 7.83798L15.8 1.50447L17.23 0Z' fill='%230D0D0D'/%3E%3C/svg%3E");
+                transform-origin: 50% 25%;
+                transform: rotate(180deg);
+            }
+            .slick-next {
+                left: calc(36% + 2rem);
+                width: 30px;
+                @include svg-background("%3Csvg width='26' height='20' viewBox='0 0 26 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.23 0L26 9.22672V10.7733L17.23 20L15.8 18.4955L21.82 12.162L22.96 11.3098L22.85 10.9206L21.46 11.0784H0V8.92161H21.45L22.84 9.07943L22.95 8.69016L21.81 7.83798L15.8 1.50447L17.23 0Z' fill='%230D0D0D'/%3E%3C/svg%3E");
+            }
+        }
+        .loop-portfolio {
+            &__category {
+                display: none;
+            }
+        }
+    }
+    &-intro {
+        width: 100%;
+        flex-shrink: 0;
+    }
+    &-content {
+        &__cta {
+            margin-top: 7.2rem;
+            @include mq(tablet-small) {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.page-template-news {
+    background-color: $black-clr;
+    footer {
+        filter: invert(1);
+    }
+}
+.news-archieve {
+    padding: 16rem 0 20rem;
+    @include mq(tablet-small) {
+        padding: 20rem 0 22rem;
+    }
+    &__title {
+        color: $white-clr;
+        @include mq(tablet-small) {
+            text-align: center;
+        }
+    }
+    &__description {
+        margin-block: 5rem 14rem;
+        max-width: 66.6rem;
+        margin-inline: auto;
+        @include mq(tablet-small) {
+            margin-block: 4rem 24rem;
+        }
+        p {
+            color: $white-clr;
+            @include mq(tablet-small) {
+                text-align: center;
+            }
+        }
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(1, fr);
+        gap: 2.4rem;
+        @include mq(tablet-small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mq(tablet-wide) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3.6rem;
+        }
+        @include mq(desktop) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .loop-post {
+            width: 100%;
+            margin: 0;
+            &__title {
+                top: 3.6rem;
+                left: 2.8rem;
+                font-size: 2rem;
+                line-height: 2.4rem;
+                @include mq(desktop-small) {
+                    font-size: 2.4rem;
+                    line-height: 3.2rem;
+                }
+            }
+            &__date {
+                bottom: 2.8rem;
+                left:  2.8rem;
+            }
+        }
+    }
+    &__content {
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 12rem;
+            .page-numbers {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 2rem;
+                width: 4rem;
+                height: 4rem;
+                color: #4d4d4d;
+                font-size: 2.4rem;
+                line-height: 3.6rem;
+                &.current {
+                    color: $white-clr;
+                    border-radius: 50%;
+                    border: 1px solid $white-clr;
+                }
+                &.next, &.prev {
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+}

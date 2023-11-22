@@ -1,0 +1,35 @@
+.brands {
+    display: flex;
+    height: 100vh;
+    background-color: $black-clr;
+    .container {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        align-items: flex-start;
+        @include mq(tablet-small, max) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+    &-title {
+        color: $gray-light-clr;
+    }
+    &-description {
+        color: $gray-clr;
+    }
+    &-item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6rem;
+        @include mq(tablet-small) {
+            margin-left: 10rem;
+            gap: 8rem 6rem;
+        }
+        &__image {
+            opacity: 0.6;
+        }
+    }
+}
